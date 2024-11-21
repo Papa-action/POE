@@ -21,6 +21,22 @@ public class TaskTest {
     private int[] taskDuration;
     private int numberOfTasks;
 
+    @BeforeAll
+    public static void setUpClass() throws Exception {
+    }
+
+    @AfterAll
+    public static void tearDownClass() throws Exception {
+    }
+
+    @BeforeEach
+    public void setUp() throws Exception {
+    }
+
+    @AfterEach
+    public void tearDown() throws Exception {
+    }
+
     /**
      * Test of checkTaskDescription method, of class Task.
      */
@@ -110,11 +126,75 @@ public class TaskTest {
     }
 
     /**
+     * Test of checkTaskDescription method, of class Task.
+     */
+    @Test
+    public void testCheckTaskDescription() {
+        System.out.println("checkTaskDescription");
+        String taskDescription = "";
+        Task instance = null;
+        boolean expResult = false;
+        boolean result = instance.checkTaskDescription(taskDescription);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of printTaskDetails method, of class Task.
+     */
+    @Test
+    public void testPrintTaskDetails() {
+        System.out.println("printTaskDetails");
+        String name = "";
+        String lastName = "";
+        String taskName = "";
+        String taskDescription = "";
+        Task instance = null;
+        String expResult = "";
+        String result = instance.printTaskDetails(name, lastName, taskName, taskDescription);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of TaskID method, of class Task.
+     */
+    @Test
+    public void testTaskID() {
+        System.out.println("TaskID");
+        String taskName = "";
+        String name = "";
+        Task instance = null;
+        String expResult = "";
+        String result = instance.TaskID(taskName, name);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of returnTotalHours method, of class Task.
+     */
+    @Test
+    public void testReturnTotalHours() {
+        System.out.println("returnTotalHours");
+        int hours = 0;
+        Task instance = null;
+        int expResult = 0;
+        int result = instance.returnTotalHours(hours);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
      * Test of returnTotalHours method, of class Task.
      */
     
 
-    @org.junit.jupiter.api.Test
+  /*  @org.junit.jupiter.api.Test
     public void testReturnTotalHours() {
         taskDuration[0] = 10;
         taskDuration[1] = 12;
@@ -128,6 +208,6 @@ public class TaskTest {
         int result = returnTotalHours();
         assertEquals(result, result);
 
-    }
+    }*/
 
 }
